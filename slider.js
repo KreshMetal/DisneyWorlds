@@ -1,7 +1,7 @@
 var images = document.querySelectorAll(".sliderLine img");
 var sliderLine = document.querySelector(".sliderLine")
 var btns = document.querySelectorAll(".sliderBtn");
-var circle = document.querySelector(".currentChar");
+var currentChar = document.querySelector(".currentChar");
 var imageSize = 250;
 var count = 0;
 var width;
@@ -12,10 +12,10 @@ function init()
     width = document.querySelector(".slider").offsetWidth;
     if (width < 510 && imageSize == 250)
     {
-        imageSize = 160;
+        imageSize = 130;
         resize(60);
     }
-    if (width >= 510 && imageSize == 160)
+    if (width >= 510 && imageSize == 130)
     {
         imageSize = 250;
         resize(95);
@@ -47,8 +47,8 @@ function sliderPrev()
 function resize(pos)
 {
     sliderLine.style.height = imageSize + "px";
-    circle.style.height = imageSize + 15 + "px";
-    circle.style.width = imageSize + 15 + "px";
+    currentChar.style.height = imageSize + 15 + "px";
+    currentChar.style.width = imageSize + 15 + "px";
     for(let i = 0; i < btns.length; i++)
     {
         btns[i].style.bottom = pos + "px";
@@ -57,4 +57,5 @@ function resize(pos)
 
 window.addEventListener("resize", init);
 init();
-console.log(1);
+console.log(1)
+
