@@ -2,6 +2,7 @@ var images = document.querySelectorAll(".sliderLine img");
 var sliderLine = document.querySelector(".sliderLine")
 var btns = document.querySelectorAll(".sliderBtn");
 var currentChar = document.querySelector(".currentChar");
+var charList = document.querySelectorAll(".charDescription");
 var imageSize = 250;
 var count = 0;
 var width;
@@ -28,20 +29,24 @@ function init()
 
 function sliderNext()
 {
+    charList[count].style.display = "none";
     count++;
     if(count >= images.length)
         count = 0;
     console.log(space);
     sliderLine.style.left = -count*space + "px";
+    charList[count].style.display = "grid";
 }
 
 function sliderPrev()
 {
+    charList[count].style.display = "none";
     count--;
     if(count <= -1)
         count = images.length-1;
         console.log(space);
     sliderLine.style.left = -count*space + "px";
+    charList[count].style.display = "grid";
 }
 
 function resize(pos)
@@ -57,5 +62,4 @@ function resize(pos)
 
 window.addEventListener("resize", init);
 init();
-console.log(1)
-
+charList[count].style.display = "grid";

@@ -330,10 +330,17 @@ header img
     left: 0;
 }
 
+.charDescription
+{
+    display: none;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 20px;
+}
+
 .charDescription img
 {
-    width: 50%;
-    float: left;
+    width: 100%;   
 }
 
 @media (max-width: 1600px)
@@ -362,6 +369,11 @@ header img
     .filmDescription p
     {
         font-size: 3vw;
+    }
+
+    .charDescription
+    {
+        grid-template-columns: 1fr;
     }
 }
 
