@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Миры Дисней</title>
+    <link rel = "stylesheet" href = "style.css">
+    <link rel = "icon" type="image/png" href="images/fav.png">
+    <script src="https://kit.fontawesome.com/daa58c3259.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div id = "navmenu">
+            <button id = "navbtn" onclick="navMenuBtnClc()">MENU</button>
+            <label for = "navbtn" id="circle"><span class = "cross"></span></label>
+        </div>
+        <ul class = "nav first">
+            <li>
+                О компании Disney
+            </li>
+            <li>
+                История компании
+            </li>
+        </ul>
+        <a href="index.html" class="logo"><img src="images/logo.png"></a>
+        <ul class = "nav second">
+            <li>
+                Миры Disney
+            </li>
+            <li>
+                Поделиться своей историей
+            </li>
+        </ul>   
+    </header>
+    <div id = "wrapper">
+        <main>
+            <img class = "worldPr" src = "images/monstersPr.jpg">
+            <div class="worldContent">
+                <div class = "worldDescription">
+                    <h2>Корпорация монстров</h2>
+                    <p>
+                        Оскароносный мультфильм, вошедший в топ-250 «КиноПоиска» и ставший любимым уже для нескольких поколений детей и их родителей. Впрочем, многим бабушкам и дедушкам тоже нравится «Корпорация монстров». Этот мультфильм – отличный повод собраться всей семьей и зарядиться хорошим настроением. В параллельном мире, в городе с говорящим названием Монстрополис живут профессиональные пугальщики всех мастей, которые работают на Корпорацию, добывая детский крик, служащий аналогом электроэнергии. В Монстрополисе действует одно правило, которое нельзя нарушать ни при каких обстоятельствах: на территорию города не должны проникать дети. Говорят, они крайне опасны и даже ядовиты для монстров. Но однажды страшное все-таки происходит: дверь в иное измерение осталась открытой, и в город проникает ребенок. Маленькую девчушку, которая толком еще не умела говорить, находит монстр Салливан. На первое время он прячет «источник угрозы» у себя и поэтому рассказывает о ней лишь своему лучшему другу – одноглазому зеленому монстру Майку Вазовски.
+                    </p>
+                </div>
+                <!-- <div class = "filmsList">
+                    <h2>Фильмы этой серии</h2>
+                    <div class = "films">
+                        <div class = "film">
+                            <div class = "filmDescription">
+                                <h3>Корпорация монстров</h3>
+                                <p>
+                                    Все дети знают, что как только они ложатся спать и гаснет свет, отовсюду начинают появляться монстры. Но они даже не подозревают, что монстры их пугают не просто так, а потому что это их работа. Ни одному ребенку не позволено пересекать границу мира чудищ. Но однажды любопытной Бу все же удается пробраться в Монстрополис.
+                                </p>
+                            </div>
+                            <img src = "images/film1.webp">
+                        </div>
+                        <div class = "film">
+                            <div class = "filmDescription">
+                                <h3>Университет монстров</h3>
+                                <p>
+                                    Майк и Салли – самые опытные пугатели в Монстрополисе, но так было далеко не всегда. Когда они встретились впервые, эти монстры терпеть друг друга не могли. «Университет Монстров» - история о том, как наши старые знакомые прошли путь от взаимной неприязни к крепкой дружбе.
+                                </p>
+                            </div>
+                            <img src = "images/film2.webp">
+                        </div>
+                        <div class = "film">
+                            <div class = "filmDescription">
+                                <h3>Монстры за работой</h3>
+                                <p>
+                                    Что произошло, когда жители города переориентировались на добычу энергии не из детского страха, а из смеха?
+                                </p>
+                            </div>
+                            <img src = "images/film3.webp">
+                        </div>
+                    </div>
+                </div> -->
+                <h2>
+                    Персонажи<br><br>
+                </h2>
+                <div class="characters">
+                    <span class = "currentChar"></span>
+                    <div class="slider">
+                        <div class="sliderLine">
+                            <img src = "images/char1.webp" alt="">
+                            <img src = "images/char2.webp" alt="">
+                            <img src = "images/char3.webp" alt="">
+                            <img src = "images/char4.webp" alt="">
+                            <img src = "images/char5.webp" alt="">
+                            <img src = "images/char6.webp" alt="">
+                            <img src = "images/char7.webp" alt="">
+                        </div>
+                        <button class = "sliderBtn next" onclick="sliderNext()"><i class="fa-solid fa-arrow-right"></i></button>
+                        <button class = "sliderBtn prev" onclick="sliderPrev()"><i class="fa-solid fa-arrow-left"></i></button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer>
+
+    </footer>
+    <script src="navbtnclick.js"></script>
+    <script src="slider.js"></script>
+</body>
+</html>
