@@ -291,6 +291,7 @@ header img
     position: relative;
     overflow: hidden;
     width: 100%;
+    margin-bottom: 40px;
 }
 
 .sliderLine
@@ -327,6 +328,12 @@ header img
 .sliderBtn.prev
 {
     left: 0;
+}
+
+.charDescription img
+{
+    width: 50%;
+    float: left;
 }
 
 @media (max-width: 1600px)
