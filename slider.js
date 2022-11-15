@@ -57,4 +57,4 @@ function resize(pos)
 
 window.addEventListener("resize", init);
 init();
-
+console.log(1);
