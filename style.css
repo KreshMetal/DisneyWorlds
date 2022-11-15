@@ -331,7 +331,6 @@ header img
 {
     #wrapper
     {
-        grid-template-columns: 30px 1fr 30px;
         margin: 0;
     }
 
@@ -339,8 +338,8 @@ header img
     {
         width: 100%;
         z-index: 100;
-        grid-template-columns: 100px 1fr 100px;
-        grid-template-rows: 100px 250px 250px;
+        grid-template-columns: 10vw 1fr 10vw;
+        grid-template-rows: 10vh 45vh 45vh;
         grid-template-areas: "btn logo ."
                              ". first ."
                              ". second .";
@@ -350,6 +349,7 @@ header img
         display: none;
         flex-direction: column;
         justify-content: start;
+        align-items: center;
         font-size: 35px;
     }
 
@@ -358,7 +358,7 @@ header img
         color: white;
         width: 100%;
         position: relative;
-        margin-bottom: 75px;
+        margin-bottom: 12.5vh;
     }
 
     header .nav li::after
