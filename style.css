@@ -214,6 +214,7 @@ header img
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 450px;
     text-align: center;
+    gap: 15px;
 }
 
 .filmDescription
@@ -221,7 +222,7 @@ header img
     position: absolute;
     opacity: 0;
     height: 70%;
-    width: 400px;
+    width: 100%;
     padding: 2em;
     border-radius: 1rem;
     background: rgba(255, 255, 255, .7);
@@ -327,6 +328,25 @@ header img
 {
     left: 0;
 }
+
+@media (max-width: 1600px)
+{
+    .films
+    {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-flow: row;
+        grid-auto-rows: 450px;
+    }
+}
+
+@media (max-width: 810px)
+{
+    .films
+    {
+        grid-template-columns: 1fr;
+    }
+}
+
 
 @media (max-width: 740px) 
 {
