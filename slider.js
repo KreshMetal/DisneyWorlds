@@ -14,7 +14,7 @@ function init()
     if (width < 510 && imageSize == 250)
     {
         imageSize = 130;
-        resize(60);
+        resize(40);
     }
     if (width >= 510 && imageSize == 130)
     {
