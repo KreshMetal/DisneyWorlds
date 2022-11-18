@@ -170,7 +170,7 @@ header img
     position: relative;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 130px 30px;
+    grid-template-rows: 130px;
     justify-items: center;
     align-content: center;
     text-align: center;
@@ -481,6 +481,11 @@ header img
     #worlds
     {
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .world img
+    {
+        max-width: 100%;
     }
 }
 
