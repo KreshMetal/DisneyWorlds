@@ -33,7 +33,7 @@ main
 header
 {
     display: grid;
-    grid-template-columns: 1fr 300px 1fr;
+    grid-template-columns: 40vw 20vw 40vw;
     grid-template-rows: 100px;
     width: 100%;
     height: 100px;
@@ -52,7 +52,7 @@ header .nav
     align-items: center;
     font-family: 'Oswald', sans-serif;
     color: white;
-    font-size: 30px;
+    font-size: 1.7vw;
 }
 
 header .nav.first
@@ -67,6 +67,7 @@ header .nav.second
 
 header li
 {
+    flex: 1;
     position: relative;
     display: flex;
     align-items: center;
@@ -418,7 +419,7 @@ header img
         color: white;
         width: 100%;
         position: relative;
-        margin-bottom: 12.5vh;
+        flex: 1;
     }
 
     header .nav li::after
@@ -430,10 +431,16 @@ header img
         background-color: rgb(255, 255, 255);
     }
 
+    .worldContent p
+    {
+        font-size: 3vw;
+    }
+
     #navmenu
     {
         display: block;
     }
+    
 }
 
 @media (max-width: 560px)
