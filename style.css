@@ -19,6 +19,7 @@ body
     display: grid;
     grid-template-columns: 10vw 80vw 10vw;
     grid-template-areas: ". main .";
+    overflow: hidden;
 }
 
 main
@@ -393,8 +394,26 @@ header img
 
 .textWithPhoto img
 {
+    position: relative;
     align-self: start;
     width: 100%;
+    opacity: 0;
+    transition: all 1s linear;
+}
+
+.textWithPhoto img.scrol-animate-opacity
+{
+    opacity: 1;
+}
+
+.textWithPhoto.left img.scrol-animate-left
+{
+    left: 0;
+}
+
+.textWithPhoto.right img.scrol-animate-right
+{
+    right: 0;
 }
 
 #history .textWithPhoto p
@@ -405,6 +424,16 @@ header img
 .textWithPhoto.left
 {
     grid-template-columns: .5fr 1fr;
+}
+
+.textWithPhoto.right img
+{
+    right: -50vw;
+}
+
+.textWithPhoto.left img
+{
+    left: -50vw;
 }
 
 .textWithPhoto.right
@@ -475,6 +504,14 @@ header img
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
+@media (max-width: 1200px)
+{
+    .disneyFotoSet
+    {
+        grid-template-columns: repeat(2,1fr);
+    }
+} 
 
 @media (max-width: 890px) 
 {
@@ -576,6 +613,11 @@ header img
     .worldContent p
     {
         font-size: 3vw;
+    }
+
+    .disneyFotoSet
+    {
+        grid-template-columns: repeat(1,1fr);
     }
 
     #navmenu
