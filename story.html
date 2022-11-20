@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Миры Дисней</title>
+    <link rel = "stylesheet" href = "style.css">
+    <link rel = "icon" type="image/png" href="images/fav.png">
+</head>
+<body>
+    <header>
+        <div id = "navmenu">
+            <button id = "navbtn" onclick="navMenuBtnClc()">MENU</button>
+            <label for = "navbtn" id="circle"><span class = "cross"></span></label>
+        </div>
+        <ul class = "nav first">
+            <li>
+                <a href="index.html">О компании Disney</a>
+            </li>
+            <li>
+                <a href="history.html">История компании</a>
+            </li>
+        </ul>
+        <a href="index.html" class="logo"><img src="images/logo.png"></a>
+        <ul class = "nav second">
+            <li>
+                <a href="#">Миры Disney</a>
+            </li>
+            <li>
+                <a href="#">Поделиться своей историей</a>
+            </li>
+        </ul>   
+    </header>
+    <div id = "wrapper">
+        <main>
+            <div id = "story">
+                <p>
+                    Дисней любят во всем мире - будь то тематические парки, фильмы, музыка, персонажи или что-то еще, что делает людей счастливыми. Когда люди разделяют страсть к чему-либо, что связано с Disney, это сильная связь. Это радость. Это веселье. Это шутки или мелодии, которые связывают их вместе, а не просто радость. Это воспоминания, которые заставляют их - и нас - улыбаться. Дисней - это часть жизни многих людей на ежедневной основе. И когда два человека встречаются и влюбляются друг в друга благодаря этим общим воспоминаниям, их отношения начинаются просто волшебно.
+                </p>
+                <p>
+                    Мы хотим поделиться <i><b>вашей </b></i>волшебной диснеевской историей любви, независимо от того, познакомились ли вы на званом ужине, через друзей или на другом сайте знакомств. Мы хотим, чтобы все увидели ваши фотографии и прочитали, как началось <i><b>ваше</b></i> приключение, чтобы вдохновить их на общение с другими людьми, которые тоже любят Дисней.
+                </p>
+                <p>
+                    Если у вас есть своя история любви в Диснее, напишите нам по электронной почте или заполните форму ниже. Или, если вы знаете кого-то, у кого было предложение руки и сердца в Диснее, свадьба в Диснее или кто просто влюбился в Диснее, поделитесь с ними этим. Мы просто обожаем истории любви в Диснее!
+                </p>
+                <form action="" method="get">
+                    <div class = "container">
+                        <p class = "inputBox name">
+                            <input type = "text" name = "name" required>
+                            <span>Ваше имя:</span>
+                            <i></i>
+                        </p>
+                        <p class = "inputBox mail">
+                            <input type = "text" name = "mail" required>
+                            <span>Ваша почта:</span>
+                            <i></i>
+                        </p>
+                        <p class = "inputBox city">
+                            <input type = "text" name = "city" required>
+                            <span>Ваш город:</span>
+                            <i></i>
+                        </p>
+                        <p class = "inputBox str">
+                            <textarea name = "story" required></textarea>
+                            <span>Ваша история:</span>
+                            <i></i>
+                        </p>
+                        <p class = "img">
+                            <label for = "loveImg">Ваша любовная Дисней фотография:</label>
+                            <br><input type = "file">
+                        </p>
+                        <p class = "sbm"><input type = "submit"></p>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+    <footer>
+
+    </footer>
+    <script src="navbtnclick.js"></script>
+</body>
+</html>

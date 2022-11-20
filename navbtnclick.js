@@ -17,6 +17,7 @@ function navMenuBtnClc()
         main.style.transform = "translateY(100px)";
         links[0].style.display = "flex";
         links[1].style.display = "flex";
+        document.body.classList.add("hiden");
         isOpen = true;
     }
     else
@@ -27,6 +28,7 @@ function navMenuBtnClc()
         links[1].style.display = "none";
         nav.style.height = "100px";
         isOpen = false;
+        document.body.classList.remove("hiden");
         setTimeout(() => {nav.style.background = "transparent"}, 550)
         setTimeout(() => {nav.style.position = "relative"; main.style.transform = "translateY(0px)";}, 700)
     }

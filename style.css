@@ -56,6 +56,11 @@ header .nav
     font-size: 1.7vw;
 }
 
+.hiden
+{
+    overflow: hidden;
+}
+
 header .nav.first
 {
     grid-area: first;
@@ -257,6 +262,7 @@ header img
 .filmDescription p
 {
     text-align: justify;
+    font-size: 15px;
 }
 
 .filmDescription p,
@@ -361,6 +367,7 @@ header img
     width: 100%;   
 }
 
+#story p,
 #history p
 {
     margin-top: 20px;
@@ -455,6 +462,134 @@ header img
     width: 100%;
 }
 
+#story .inputBox
+{
+    margin: 0;
+    position: relative;
+}
+
+#story .inputBox textarea,
+#story .inputBox input
+{
+    position: relative;
+    width: 100%;
+    height: 30px;
+    color: black;
+    background: transparent;
+    padding: 20px 10px 10px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    z-index: 10;
+}
+
+#story .inputBox span
+{
+    position: absolute;
+    left: 0;
+    padding: 20px 10px 10px;
+    font-size: 15px;
+    bottom: 0px;
+    pointer-events: none;
+    color: gray;
+    transition: .5s;
+}
+
+#story .inputBox i
+{
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 3px;
+    background: rgb(255, 255, 255);
+    transition: .5s;
+    pointer-events: none;
+    border-radius: 4px;
+    z-index: 8;
+}
+
+#story .inputBox input:valid ~ span,
+#story .inputBox input:focus ~ span
+{
+    color: white;
+    transform: translateY(-20px);
+}
+
+#story .inputBox textarea:valid ~ span,
+#story .inputBox textarea:focus ~ span
+{
+    color: white;
+    transform: translateY(calc(-10vh + 6px));
+}
+
+#story .inputBox input:valid ~ i,
+#story .inputBox input:focus ~ i,
+#story .inputBox textarea:valid ~ i,
+#story .inputBox textarea:focus ~ i
+{
+    height: 100%;
+}
+
+#story .inputBox textarea
+{
+    height: 10vh;
+}
+
+#story .container
+{
+    margin-top: 30px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "name mail city"
+                         "str str str"
+                         "img . ."
+                         "sbm . .";
+    position: relative;
+}
+
+#story .inputBox.name
+{
+    grid-area: name;
+}
+
+#story .inputBox.mail
+{
+    grid-area: mail;
+}
+
+#story .inputBox.city
+{
+    grid-area: city;
+}
+
+#story .inputBox.str
+{
+    margin-top: 10px;
+    grid-area: str;
+}
+
+#story .img
+{
+    grid-area: img;
+}
+
+#story .sbm
+{
+    grid-area: sbm;
+}
+
+#story .sbm input
+{
+    width: 50%;
+    height: 30px;
+    border-radius: 15px;
+    background-image: linear-gradient(0deg,#43a4c5 0%, #4cd8b0 100%);
+    border-color: #43a4c5;
+}
+
+
 @media (max-width: 1600px)
 {
     .films
@@ -496,6 +631,19 @@ header img
     }
 }
 
+@media (max-width: 1050px)
+{
+    #story .container
+    {
+    grid-template-columns: 1fr;
+    grid-template-areas: "name"
+                         "mail"
+                         "city"
+                         "str"
+                         "img"
+                         "sbm";
+    }
+}
 
 @media (max-width: 1300px) 
 {
