@@ -67,6 +67,12 @@ header .nav
     visibility: hidden;
     transition: all 1s ease;
     z-index: 3;
+    background-image: linear-gradient(0deg,#43a4c5 0%, #4cd8b0 100%);;
+}
+
+#worldsListBtn
+{
+    position: relative;
 }
 
 #worldsListBtn:hover .worldsListWrapper
@@ -80,7 +86,6 @@ header .nav
     display: grid;
     grid-template-columns: 1fr;
     padding: 5px;
-    background-image: linear-gradient(0deg,#43a4c5 0%, #4cd8b0 100%);;
 }
 
 .worldsList a
@@ -794,14 +799,22 @@ header img
 
     .worldsListWrapper
     {
+        height: 100vh;
         width: 100vw;
+        left: 55%;
         transition: all .5s;
         top: 50%;
+        overflow: hidden;
     }
 
     .worldListItem::after
     {
-        transition: all .5s;
+        transition: all .3s;
+    }
+
+    .worldListItem
+    {
+        font-size: 3.5vh;
     }
 
     header
