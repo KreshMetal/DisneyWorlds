@@ -384,6 +384,7 @@ header img
     border-style: solid;
     border-color: rgb(55, 0, 255);
     pointer-events: none;
+    transition: all .5s;
 }
 
 .slider

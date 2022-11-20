@@ -4,6 +4,7 @@ var btns = document.querySelectorAll(".sliderBtn");
 var currentChar = document.querySelector(".currentChar");
 var charList = document.querySelectorAll(".charDescription");
 var imageSize = 250;
+var imInScreen;
 var count = 0;
 var width;
 var space;
@@ -21,31 +22,46 @@ function init()
         imageSize = 250;
         resize(95);
     }
-    let imInScreen = Math.floor(width / imageSize);
+    imInScreen = Math.floor(width / imageSize);
     if (imInScreen > 5) imInScreen = 5;
     space = Math.floor((width - imInScreen * imageSize) / (imInScreen - 1)) + imageSize;
     sliderLine.style.gap = (space - imageSize) + "px";
+    sliderLine.style.left = -count*space + "px";
 }
 
 function sliderNext()
 {
+    if(count == 0)
+        btns[1].style.display = "block";
     charList[count].style.display = "none";
     count++;
-    if(count >= images.length)
-        count = 0;
-    console.log(space);
-    sliderLine.style.left = -count*space + "px";
+    if (count == images.length - 1)
+        btns[0].style.display = "none";
+    if(count > images.length - imInScreen)
+    {
+        currentChar.style.left = (count - (images.length - imInScreen))*space - 7 + "px";
+    }
+    else
+    {
+        sliderLine.style.left = -count*space + "px";
+    }
     charList[count].style.display = "grid";
 }
 
 function sliderPrev()
 {
+    if(count == images.length - imInScreen)
+        btns[0].style.display = "block";
     charList[count].style.display = "none";
     count--;
-    if(count <= -1)
-        count = images.length-1;
-        console.log(space);
-    sliderLine.style.left = -count*space + "px";
+    if (count == 0)
+        btns[1].style.display = "none";
+    if(count >= images.length - imInScreen)
+    {
+        currentChar.style.left = (count - (images.length - imInScreen))*space - 7 + "px";
+    }
+    else
+        sliderLine.style.left = -count*space + "px";
     charList[count].style.display = "grid";
 }
 
@@ -63,3 +79,4 @@ function resize(pos)
 window.addEventListener("resize", init);
 init();
 charList[count].style.display = "grid";
+btns[1].style.display = "none";
