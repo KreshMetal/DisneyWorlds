@@ -794,7 +794,14 @@ header img
 
     .worldsListWrapper
     {
+        width: 100vw;
+        transition: all .5s;
         top: 50%;
+    }
+
+    .worldListItem::after
+    {
+        transition: all .5s;
     }
 
     header
