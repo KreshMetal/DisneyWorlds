@@ -23,6 +23,31 @@ body
     margin-bottom: 30px;
 }
 
+#castle
+{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+}
+
+.homeText
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.homeH
+{
+    font-size: 3vw;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    margin-top: 20px;
+}
+
 main
 {
     position: relative;
@@ -55,6 +80,21 @@ header .nav
     font-family: 'Oswald', sans-serif;
     color: white;
     font-size: 1.5vw;
+}
+
+header .nav li::after
+{
+    content: "";
+    width: 0;
+    height: 3px;
+    margin-top: 10px;
+    background-color: rgb(255, 255, 255);
+    transition: all 1s;
+}
+
+header .nav li:hover:after
+{
+    width: 50%;
 }
 
 .worldsListWrapper
@@ -426,6 +466,7 @@ header img
     border-color: white;
     border: none;
     background-color: black;
+    cursor: pointer;
 }
 
 .sliderBtn.next
@@ -444,11 +485,19 @@ header img
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 20px;
+    position: relative;
 }
 
 .charDescription img
 {
     width: 100%;   
+}
+
+.charDescription .charDescriptionText
+{
+    align-self: start;
+    position: relative;
+    margin-top: 30px;
 }
 
 #story p,
@@ -934,21 +983,19 @@ footer ul li:hover a
 
     header .nav li::after
     {
-        content: "";
-        width: 100px;
-        height: 3px;
-        margin-top: 10px;
-        background-color: rgb(255, 255, 255);
+        width: 50%;
     }
 
     #history h2,
-    .worldContent h2
+    .worldContent h2,
+    .homeH
     {
         font-size: 5vw;
     }
 
     #history p,
-    .worldContent p
+    .worldContent p,
+    .homeText
     {
         font-size: 3vw;
     }

@@ -26,7 +26,16 @@ function init()
     if (imInScreen > 5) imInScreen = 5;
     space = Math.floor((width - imInScreen * imageSize) / (imInScreen - 1)) + imageSize;
     sliderLine.style.gap = (space - imageSize) + "px";
-    sliderLine.style.left = -count*space + "px";
+    if(count > images.length - imInScreen)
+    {
+        sliderLine.style.left = -(images.length - imInScreen)*space + "px";
+        currentChar.style.left = (count - (images.length - imInScreen))*space - 7 + "px";
+    }
+    else
+    {
+        sliderLine.style.left = -count*space + "px";
+        currentChar.style.left = -7 + "px";
+    }
 }
 
 function sliderNext()
@@ -50,7 +59,7 @@ function sliderNext()
 
 function sliderPrev()
 {
-    if(count == images.length - imInScreen)
+    if(count == images.length - 1)
         btns[0].style.display = "block";
     charList[count].style.display = "none";
     count--;
