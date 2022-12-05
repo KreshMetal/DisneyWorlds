@@ -14,7 +14,7 @@ body
 
 #wrapper
 {
-    min-height: 90vh;
+    min-height: 70vh;
     position: relative;
     display: grid;
     grid-template-columns: 9vw 80vw 9vw;
@@ -988,6 +988,7 @@ footer ul li:hover a
 
     #history h2,
     .worldContent h2,
+    #story h2,
     .homeH
     {
         font-size: 5vw;
@@ -995,6 +996,7 @@ footer ul li:hover a
 
     #history p,
     .worldContent p,
+    #story p,
     .homeText
     {
         font-size: 3vw;

@@ -38,6 +38,17 @@ function init()
     }
 }
 
+function resize(pos)
+{
+    sliderLine.style.height = imageSize + "px";
+    currentChar.style.height = imageSize + 15 + "px";
+    currentChar.style.width = imageSize + 15 + "px";
+    for(let i = 0; i < btns.length; i++)
+    {
+        btns[i].style.bottom = pos + "px";
+    }
+}
+
 function sliderNext()
 {
     if(count == 0)
@@ -72,17 +83,6 @@ function sliderPrev()
     else
         sliderLine.style.left = -count*space + "px";
     charList[count].style.display = "grid";
-}
-
-function resize(pos)
-{
-    sliderLine.style.height = imageSize + "px";
-    currentChar.style.height = imageSize + 15 + "px";
-    currentChar.style.width = imageSize + 15 + "px";
-    for(let i = 0; i < btns.length; i++)
-    {
-        btns[i].style.bottom = pos + "px";
-    }
 }
 
 window.addEventListener("resize", init);
